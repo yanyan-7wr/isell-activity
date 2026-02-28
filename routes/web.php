@@ -9,7 +9,7 @@ Route::inertia('/', 'welcome', [
     'canRegister' => Features::enabled(Features::registration()),
 ]);
 
-Route::get('/iara', [StudentController::class, 'index']);
+Route::get('/irish', [StudentController::class, 'index']);
 
 Route::middleware(['auth', 'verified'])->group(function (): void {
     Route::inertia('/dashboard', 'dashboard')->name('dashboard');
